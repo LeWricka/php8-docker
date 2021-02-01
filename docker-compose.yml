@@ -1,0 +1,15 @@
+version: "3"
+
+networks:
+  laravel:
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php8
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "9000:9000"
