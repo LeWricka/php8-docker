@@ -6,8 +6,11 @@ The project can be mounted using docker:
 - Run:
   docker-compose up -d
   
-- By default git, composer and php8 are installed
+- By default git, composer, php8 and Zsh are installed
   
+- To go into the container:
+  docker exec -it php8 /bin/zsh
+
 - To stop de container:
   docker-compose stop
 

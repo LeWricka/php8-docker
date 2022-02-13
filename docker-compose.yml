@@ -1,15 +1,14 @@
 version: "3"
 
-networks:
-  laravel:
-
 services:
   php:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: php8
+    stdin_open: true
+    tty: true
     volumes:
-      - ./src:/var/www/html
+      - .:/var/www/html
     ports:
-      - "9000:9000"
+      - "9005:9000"
